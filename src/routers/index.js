@@ -1,0 +1,13 @@
+const express = require("express");
+const contractRouters = require("./contractRouter");
+const employeeRouters = require ("./employeeRouter");
+const accountRouters = require ("./accountRouter");
+const getdocRoutes = require ("./getdocRouter");
+const userRouters = require ("./userRouter");
+let router = express.Router();
+router.use("/contract", contractRouters);
+router.use("/employee", employeeRouters);
+router.use("/account", accountRouters);
+router.use("/user", userRouters);
+router.use("/getdoc", getdocRoutes);
+module.exports = router;
